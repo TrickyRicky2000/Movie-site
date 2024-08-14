@@ -19,13 +19,13 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovies('Spiderman')
+        searchMovies('Batman')
 
     },[]);
 
     return(
        <div className="app">
-          <h1>Ricky's streaming</h1>
+          <h1>MovieBuff</h1>
 
           <div className="search">
 
@@ -45,19 +45,17 @@ const App = () => {
             {
                 movies?.length > 0
                 ?(
-                <div className="container">
+            <div className="container">
                 {movies.map((movie) => (
                     <MovieCard movie={movie} />
 
                 ))}
 
-                
-
-                </div>
+            </div>
                 ) : (
-                    <div className="empty">
-                      <h2>No movies found</h2>
-                    </div>
+                <div className="empty">
+                   <h2>No movies found</h2>
+                </div>
                 )
             }
 
